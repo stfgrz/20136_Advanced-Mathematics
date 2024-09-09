@@ -1,0 +1,102 @@
+\setchapterabstract{}
+\chapter{Vectors}
+\vspace{-1.5cm}
+
+{\chaptoc\noindent\begin{minipage}[inner sep=0,outer sep=0]{0.9\linewidth}\section{Vector Space}\end{minipage}}
+
+    You start with a set $V$ and this set $V$ has two operations:
+        \begin{itemize}
+            \item An internal operation denoted by $+: V \times V \rightarrow V$.
+                The \(\times\) symbol is read "Cartesian product" and it means that the operation takes two elements from the set $V$ and returns an element in the set $V$.
+                \textit{A priori}, "+" might not be commutative.
+                You read it with two elements $A$ and $B$ and it gives you back an element in the set $V$.
+                If you feed it $B$ and $A$, it gives you back an element (which could be different) in the set $V$.
+            \item \textbf{Scalar Product:} An outer operation denoted by $\cdot: \mathbb{R} \times V \rightarrow V$
+                This operation takes an element from the set $\mathbb{R}$ and an element from the set $V$ and returns an element in the set $V$.
+                This operation is commutative.
+                It is an outer operation as you feed it with an element in $V$, a real number (which is outside $V$) and it gives you back an element in $V$.
+                We call the real number a scalar.
+        \end{itemize}
+
+    \Definition{
+        It is a set $V$ endowed with two operations: the sum and the scalar product which satisfy the following 8 properties (4 and 4). 4 Properties only apply to the sum, and other 4 apply to both scalar and sum.
+    }{Vector Space}
+
+
+\subsection{4 Properties of the Sum}
+
+    Those properties are:
+    \begin{enumerate}
+        \item \textbf{Associativity}: it tells us how to sum multiple elements; let's start with 3 elements $X$, $Y$ and $Z$ in the set $V$, denoted ad $X,Y,Z \in V$.
+            \begin{itemize}
+                \item $X + (Y + Z) = (X + Y) + Z$
+            \end{itemize}
+            The order of the elements cannot change unless we introduce the following property, i.e. commutativity.
+        \item \textbf{Existence of the Neutral Element}: there exists an element in the set $V$ such that when you sum it with any element in the set $V$, you get back the same element.
+            \begin{itemize}
+                \item $\exists 0 \in V: \forall X \in V \ \ \ \ X + 0 = 0 + X = X$
+            \end{itemize}
+            It is just a name, it is not the number 0. So far, we can just say that it exists but we cannot assert its uniqueness. (spoiler: it is indeed unique)
+        \item \textbf{Existence of the Inverse Element}: for every element in the set $V$, there exists an element in the set $V$ such that when you sum them, you get back the neutral element.
+            \begin{itemize}
+                \item $\forall X \in V, \exists Y \in V \ \ \ \ x+y = y+x = 0$
+            \end{itemize}
+        \item \textbf{Commutativity}: the order of the elements does not matter.
+            \begin{itemize}
+                \item $\forall x,y \in V \ \ \ \  X + Y = Y + X$
+            \end{itemize}
+    \end{enumerate}
+
+    \Remark{
+        There is a difference between 
+        \[\exists 0 \in V \ \ \ \ \forall x \in V\]
+        \[\forall x \in V \ \ \ \ \exists y \in V\]
+    }
+
+    \Example{
+        The above remark is equivalent to saying:
+        \begin{itemize}
+            \item There exists an ideal shoe brand for everybody
+                e.g. Adidas is the best brand for all of us
+            \item For every person, there exists an ideal shoe brand
+                e.g. Adidas is the best brand for me, Nike is the best brand for you (i.e. the brand might be person-specific)
+        \end{itemize}
+    }
+
+
+    \subsection{4 Properties of the Sum and Scalar Product}
+
+    \begin{enumerate}
+        \item[a.] \textbf{Distributivity of the scalar product over the sum}: it tells us how to distribute the scalar product over the sum of two elements.
+            \begin{itemize}
+                \item $\forall x,y, \in V, \ \forall \alpha \in \mathbb{R} \ \ \ \  \alpha (x+y) = \alpha x + \alpha y $
+            \end{itemize}
+        \item[b.] \textbf{Questo mi manca}: take 2 scalars and 2 elements of the set $V$.
+            \begin{itemize}
+                \item $ \forall \alpha , \beta \in \mathbb{R}, \ \forall x \in V \ \ \ \ (\alpha + \beta) x = \alpha x + \beta x $
+            \end{itemize}
+        \item[c.] \textbf{Associativity of the scalar product}:
+            \begin{itemize}
+                \item $\forall \alpha, \beta \in \mathbb{R}, \ \forall x \in V \ \ \ \ (\alpha \beta) x = \alpha (\beta x) $
+            \end{itemize}
+        \item[d.] \textbf{Existence of the Neutral Element for the scalar product}:
+            \begin{itemize}
+                \item $\exists 1 \in \mathbb{R} \ \ \ \ \forall x \in V \ \ \ \ 1x = x$
+            \end{itemize}
+    \end{enumerate}
+        
+
+    \Note{
+        The order might not exactly reflect the order of the properties in the book/handout.
+    }
+
+    \Remark{
+        When you are given a vector space, you are given the set $V$, the two operations and the 4+4 properties.
+        You don't know anything more about anything else.
+    }
+
+    \Note{
+        We will see more examples on thursday 12th .
+    }
+    
+    fine 09-09-2024
